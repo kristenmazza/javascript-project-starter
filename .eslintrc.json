@@ -12,6 +12,7 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
+  "ignorePatterns": ["dist/"],
   "rules": {
     "no-console": "off"
   }
