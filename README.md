@@ -8,13 +8,14 @@
 
 # Setting up Github Workflow to Deploy Web App
 1. Create SSH deploy key
+
     Generate your deploy key with the following command:
     ```
     ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
     ```
     You will get 2 files:
-    - `gh-pages.pub` is a public key
-    - `gh-pages` is a private key
+    1. `gh-pages.pub` is a public key
+    2. `gh-pages` is a private key
 
 2. Set SSH deploy keys in Github repository settings
    1. Go to Deploy Keys and add your public key with the Allow write access
