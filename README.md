@@ -5,6 +5,7 @@
 4. Install dependencies (`npm install`)
 5. Generate assets (`npm run build`)
 6. Run server (`npm start`)
+7. Run tests with `npm test`
 
 # Setting up Github Workflow to Deploy Web App
 1. Create SSH deploy key

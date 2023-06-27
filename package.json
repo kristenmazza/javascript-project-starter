@@ -4,11 +4,21 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack",
     "prepare": "husky install"
+  },
+   "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/client/src/stylesheets/"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/client/src/stylesheets/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -28,6 +38,7 @@
     "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
     "lint-staged": "^13.2.0",
     "prettier": "2.8.6",
     "style-loader": "^3.3.2",
